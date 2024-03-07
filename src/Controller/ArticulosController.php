@@ -54,7 +54,7 @@ class ArticulosController extends AbstractController
         });
 
         if ($id == 1) {
-            return $this->redirectToRoute('app_main_id_1');
+            return $this->redirectToRoute('articulo_1');
         } else {
             return $this->render('mostrar_articulo.html.twig', [
                 'articulo' => array_pop($articulo)

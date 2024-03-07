@@ -1,1 +1,11 @@
 {% extends 'plantilla_articulo.html.twig' %}
+
+{% block content %}
+    {% if articulo %}
+        <h1>{{articulo.title | upper}}</h1>
+        <p> Fecha de creacion: {{articulo.created}} </p>
+        <p> ID: {{articulo.id}} </p>
+    {% else %}
+        <p>El articulo no existe</p>
+    {% endif %}
+{% endblock %}
