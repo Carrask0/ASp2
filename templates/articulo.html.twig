@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}Articulo{% endblock %}
+{% block body %}
+    {% if articulo %}
+        <h1>{{articulo.title}}</h1>
+        <p> Fecha de creacion: {{articulo.created}} </p>
+        <p> ID: {{articulo.id}} </p>
+    {% else %}
+        <p>El articulo no existe</p>
+    {% endif %}
+{% endblock %}
