@@ -2,7 +2,7 @@
 
 {% block title %}Listado de Articulos{% endblock %}
 
-{% block body %}
+{% block content %}
 {% if articulos %}
     <h1>Listado de Articulos</h1>
     <table border=”1”>
@@ -14,7 +14,7 @@
         {% for articulo in articulos %}
         <tr>
             <td>{{articulo.id}}</td>
-            <td><a href="{{ path('app_main_id', {'id': articulo.id}) }}">{{ articulo.title }}</a></td>
+            <td><a href="{{ path('articulo_id', {'id': articulo.id}) }}">{{ articulo.title }}</a></td>
             <td>{{articulo.created}}</td>
         </tr>
         {% endfor %}

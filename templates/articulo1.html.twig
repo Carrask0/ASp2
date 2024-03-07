@@ -2,11 +2,10 @@
 
 {% block title %}Articulo{% endblock %}
 
-{% block body %}
+{% block content %}
     {% if articulo %}
-        <h1>{{ articulo.titulo }}</h1>
-        <p>{{ articulo.contenido }}</p>
-        <p>ESPECIAL CASE</p>
+        <h1>{{ articulo.title }}</h1>
+        <p>SPECIAL CASE</p>
     {% else %}
         <p>El articulo no existe</p>
     {% endif %}

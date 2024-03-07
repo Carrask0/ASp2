@@ -37,16 +37,16 @@ class ArticulosController extends AbstractController
         ]
     ];
 
-    #[Route('/articulos', name: 'app_main')]
+    #[Route('/articulos', name: 'articulos')]
     public function show_articulos(): Response
     {
-        return $this->render('articulos.html.twig', [
+        return $this->render('mostrar_articulos.html.twig', [
             'articulos' => $this->articulos
         ]);
     }
 
 
-    #[Route('/articulo/{id}', name: 'app_main_id')]
+    #[Route('/articulo/{id}', name: 'articulo_id')]
     public function find_articulo($id = 2): Response
     {
         $articulo = array_filter($this->articulos, function ($a) use ($id) {
@@ -56,13 +56,13 @@ class ArticulosController extends AbstractController
         if ($id == 1) {
             return $this->redirectToRoute('app_main_id_1');
         } else {
-            return $this->render('articulo.html.twig', [
+            return $this->render('mostrar_articulo.html.twig', [
                 'articulo' => array_pop($articulo)
             ]);
         }
     }
 
-    #[Route('/articulo1', name: 'app_main_id_1')]
+    #[Route('/articulo1', name: 'articulo_1')]
     public function find_articulo_1(): Response
     {
         $articulo = $this->articulos[0];
