@@ -1,6 +1,6 @@
     <img 
         {#this template receives parameter nombre#}
-        src = asset('assets/images/'{{nombre}})
+        src="{{ asset('assets/images/' ~ nombre) }}"
         width="100"
         height="100"
         alt="logo">
